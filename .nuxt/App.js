@@ -10,8 +10,9 @@ import '../node_modules/vuetify/dist/vuetify.css'
 
 import _6f6c098b from '../layouts/default.vue'
 import _60985866 from '../layouts/simpleview.vue'
+import _0a8245e1 from '../layouts/todoview.vue'
 
-const layouts = { "_default": sanitizeComponent(_6f6c098b),"_simpleview": sanitizeComponent(_60985866) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_simpleview": sanitizeComponent(_60985866),"_todoview": sanitizeComponent(_0a8245e1) }
 
 export default {
   render (h, props) {

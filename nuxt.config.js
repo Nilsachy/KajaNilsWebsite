@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Nils Achy',
-    title: 'Nils Achy',
+    titleTemplate: '%s',
+    title: 'For you',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/avatar.jpg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.jpg' }
     ]
   },
 

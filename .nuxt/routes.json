@@ -3,12 +3,21 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/inspire.vue",
-    "chunkName": "pages/inspire"
+    "chunkName": "pages/inspire",
+    "_name": "_238dd1ca"
+  },
+  {
+    "name": "todo",
+    "path": "/todo",
+    "component": "/Users/nilsachy/KajaNilsWebsite/pages/todo.vue",
+    "chunkName": "pages/todo",
+    "_name": "_302fc4f4"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_412b41c2"
   }
 ]
