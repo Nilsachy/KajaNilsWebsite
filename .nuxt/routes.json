@@ -3,35 +3,36 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_238dd1ca"
+    "chunkName": "pages/inspire"
   },
   {
     "name": "movies",
     "path": "/movies",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/movies.vue",
-    "chunkName": "pages/movies",
-    "_name": "_4e54cc03"
+    "chunkName": "pages/movies"
   },
   {
     "name": "places",
     "path": "/places",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/places.vue",
-    "chunkName": "pages/places",
-    "_name": "_a8f47ee8"
+    "chunkName": "pages/places"
+  },
+  {
+    "name": "restaurants",
+    "path": "/restaurants",
+    "component": "/Users/nilsachy/KajaNilsWebsite/pages/restaurants.vue",
+    "chunkName": "pages/restaurants"
   },
   {
     "name": "todo",
     "path": "/todo",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/todo.vue",
-    "chunkName": "pages/todo",
-    "_name": "_302fc4f4"
+    "chunkName": "pages/todo"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_412b41c2"
+    "chunkName": "pages/index"
   }
 ]

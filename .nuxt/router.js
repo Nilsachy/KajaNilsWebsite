@@ -7,6 +7,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _238dd1ca = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _4e54cc03 = () => interopDefault(import('../pages/movies.vue' /* webpackChunkName: "pages/movies" */))
 const _a8f47ee8 = () => interopDefault(import('../pages/places.vue' /* webpackChunkName: "pages/places" */))
+const _3f0eb1c6 = () => interopDefault(import('../pages/restaurants.vue' /* webpackChunkName: "pages/restaurants" */))
 const _302fc4f4 = () => interopDefault(import('../pages/todo.vue' /* webpackChunkName: "pages/todo" */))
 const _412b41c2 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -33,6 +34,10 @@ export const routerOptions = {
     path: "/places",
     component: _a8f47ee8,
     name: "places"
+  }, {
+    path: "/restaurants",
+    component: _3f0eb1c6,
+    name: "restaurants"
   }, {
     path: "/todo",
     component: _302fc4f4,

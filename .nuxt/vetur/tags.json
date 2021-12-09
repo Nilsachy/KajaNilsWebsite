@@ -14,6 +14,9 @@
   "Place": {
     "description": "Auto imported from components/place.vue"
   },
+  "Restaurant": {
+    "description": "Auto imported from components/restaurant.vue"
+  },
   "Todo": {
     "description": "Auto imported from components/todo.vue"
   }

@@ -3,6 +3,7 @@ export { default as Tutorial } from '../../components/Tutorial.vue'
 export { default as VuetifyLogo } from '../../components/VuetifyLogo.vue'
 export { default as Movie } from '../../components/movie.vue'
 export { default as Place } from '../../components/place.vue'
+export { default as Restaurant } from '../../components/restaurant.vue'
 export { default as Todo } from '../../components/todo.vue'
 
 // nuxt/nuxt.js#8607

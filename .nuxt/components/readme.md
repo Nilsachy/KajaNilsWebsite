@@ -11,4 +11,5 @@ You can directly use them in pages and other components without the need to impo
 - `<VuetifyLogo>` | `<vuetify-logo>` (components/VuetifyLogo.vue)
 - `<Movie>` | `<movie>` (components/movie.vue)
 - `<Place>` | `<place>` (components/place.vue)
+- `<Restaurant>` | `<restaurant>` (components/restaurant.vue)
 - `<Todo>` | `<todo>` (components/todo.vue)

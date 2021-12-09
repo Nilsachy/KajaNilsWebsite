@@ -1,9 +1,6 @@
 <template>
   <div>
-    <h1 class="mt-10" style="color:white;">
-      Bonjour Kaja
-    </h1>
-    <vue-typer text="Hello World! I was registered locally!" />
+    <vue-typer style="color:white !important;" text="Bonjour Kaja! This is our website! Hope you like it" />
     <div class="center-screen mt-10">
       <v-row justify="center">
         <v-col cols="12" sm="4">
