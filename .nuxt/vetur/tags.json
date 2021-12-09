@@ -8,6 +8,9 @@
   "VuetifyLogo": {
     "description": "Auto imported from components/VuetifyLogo.vue"
   },
+  "Movie": {
+    "description": "Auto imported from components/movie.vue"
+  },
   "Todo": {
     "description": "Auto imported from components/todo.vue"
   }

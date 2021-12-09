@@ -6,7 +6,7 @@
           <v-toolbar color="transparent" elevation="0">
             <v-toolbar-side-icon />
             <v-toolbar-title class="headline">
-              All the things we want to do! <span style="font-size:100%;color:red;">&hearts;</span>
+              All the movies we want to watch! <span style="font-size:100%;color:red;">&hearts;</span>
             </v-toolbar-title>
             <v-spacer />
             <v-subheader class="headline">
@@ -17,44 +17,44 @@
 
           <v-list two-line subheader>
             <p class="mx-12 text-right">
-              <b>{{ todos.length }}</b> todos
+              <b>{{ movies.length }}</b> movies
             </p>
 
             <v-list-item>
               <v-list-item-content>
                 <v-text-field
-                  id="newTodo"
-                  v-model="newTodo.title"
+                  id="newMovie"
+                  v-model="newMovie.title"
                   outlined
-                  name="newTodo"
-                  label="Type your todo"
-                  @keyup.enter="addNewTodo"
+                  name="newMovie"
+                  label="Type your movie"
+                  @keyup.enter="addNewMovie"
                 />
               </v-list-item-content>
             </v-list-item>
           </v-list>
 
           <v-list subheader two-line flat>
-            <v-subheader v-if="todos.length == 0" class="subheading">
-              We have 0 Todos, add some
+            <v-subheader v-if="movies.length == 0" class="subheading">
+              We have 0 movies, add some
             </v-subheader>
             <v-subheader v-else class="subheading">
-              Our Todos
+              Our movies
             </v-subheader>
 
             <v-list-item-group>
-              <v-list-item v-for="(todo, i) in todos" :key="i">
+              <v-list-item v-for="(movie, i) in movies" :key="i">
                 <v-list-item-action>
-                  <v-checkbox v-model="todo.done" @change="editTodo(todo)" />
+                  <v-checkbox v-model="movie.watched" @change="editMovie(movie)" />
                 </v-list-item-action>
 
                 <v-list-item-content>
                   <v-list-item-title
                     :class="{
-                      done: todo.done
+                      done: movie.watched
                     }"
                   >
-                    {{ todo.title }}
+                    {{ movie.title }}
                   </v-list-item-title>
                   <v-list-item-subtitle>Added on: {{ date }}{{ ord }} {{ day }} {{ year }}</v-list-item-subtitle>
                 </v-list-item-content>
@@ -63,7 +63,7 @@
                   ripple
                   small
                   color="red"
-                  @click="removeTodo(todo)"
+                  @click="removeMovie(movie)"
                 >
                   <v-icon class="white--text">
                     mdi-close
@@ -84,35 +84,35 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      todos: [],
-      newTodo: {
+      movies: [],
+      newMovie: {
         title: '',
-        done: false
+        watched: false
       },
-      day: this.todoDay(),
+      day: this.movieDay(),
       date: new Date().getDate(),
       ord: this.nth(new Date().getDate()),
       year: new Date().getFullYear()
     }
   },
   mounted () {
-    this.getAllToDos()
+    this.getAllMovies()
   },
   methods: {
-    getAllToDos () {
-      axios.get('http://localhost:8765/todos', {
+    getAllMovies () {
+      axios.get('http://localhost:8765/movies', {
       })
         .then((response) => {
-          this.todos = response.data
+          this.movies = response.data
         })
         .catch(error => console.log(error))
     },
-    addNewTodo () {
+    addNewMovie () {
       const formdata = new FormData()
-      formdata.append('title', this.newTodo.title)
-      formdata.append('done', this.newTodo.done)
+      formdata.append('title', this.newMovie.title)
+      formdata.append('watched', this.newMovie.watched)
       axios({
-        url: 'http://localhost:8765/todos/create',
+        url: 'http://localhost:8765/movies/create',
         method: 'POST',
         data: formdata
       }).then((response) => {
@@ -122,13 +122,13 @@ export default {
         window.alert('in catch' + JSON.stringify(response.data.errors))
       })
     },
-    editTodo (todo) {
+    editMovie (movie) {
       const formdata = new FormData()
-      formdata.append('id', todo.id)
-      formdata.append('title', todo.title)
-      formdata.append('done', todo.done)
+      formdata.append('id', movie.id)
+      formdata.append('title', movie.title)
+      formdata.append('watched', movie.watched)
       axios({
-        url: 'http://localhost:8765/todos/edit_todo',
+        url: 'http://localhost:8765/movies/edit_movie',
         method: 'PUT',
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -143,11 +143,11 @@ export default {
         console.log(JSON.stringify(response.data.errors))
       })
     },
-    removeTodo (todo) {
+    removeMovie (movie) {
       const formdata = new FormData()
-      formdata.append('id', todo.id)
+      formdata.append('id', movie.id)
       axios({
-        url: 'http://localhost:8765/todos/delete_todo',
+        url: 'http://localhost:8765/movies/delete_movie',
         method: 'DELETE',
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -175,7 +175,7 @@ export default {
           return 'th'
       }
     },
-    todoDay () {
+    movieDay () {
       const d = new Date()
       const days = [
         'Sunday',

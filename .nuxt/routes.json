@@ -7,6 +7,13 @@
     "_name": "_238dd1ca"
   },
   {
+    "name": "movies",
+    "path": "/movies",
+    "component": "/Users/nilsachy/KajaNilsWebsite/pages/movies.vue",
+    "chunkName": "pages/movies",
+    "_name": "_4e54cc03"
+  },
+  {
     "name": "todo",
     "path": "/todo",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/todo.vue",
