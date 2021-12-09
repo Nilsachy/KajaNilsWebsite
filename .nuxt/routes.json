@@ -14,6 +14,13 @@
     "_name": "_4e54cc03"
   },
   {
+    "name": "places",
+    "path": "/places",
+    "component": "/Users/nilsachy/KajaNilsWebsite/pages/places.vue",
+    "chunkName": "pages/places",
+    "_name": "_a8f47ee8"
+  },
+  {
     "name": "todo",
     "path": "/todo",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/todo.vue",

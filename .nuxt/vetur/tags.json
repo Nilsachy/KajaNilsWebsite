@@ -11,6 +11,9 @@
   "Movie": {
     "description": "Auto imported from components/movie.vue"
   },
+  "Place": {
+    "description": "Auto imported from components/place.vue"
+  },
   "Todo": {
     "description": "Auto imported from components/todo.vue"
   }
