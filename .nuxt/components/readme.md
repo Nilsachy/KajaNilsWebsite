@@ -10,6 +10,7 @@ You can directly use them in pages and other components without the need to impo
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<VuetifyLogo>` | `<vuetify-logo>` (components/VuetifyLogo.vue)
 - `<Movie>` | `<movie>` (components/movie.vue)
+- `<Pictures>` | `<pictures>` (components/pictures.vue)
 - `<Place>` | `<place>` (components/place.vue)
 - `<Restaurant>` | `<restaurant>` (components/restaurant.vue)
 - `<Todo>` | `<todo>` (components/todo.vue)

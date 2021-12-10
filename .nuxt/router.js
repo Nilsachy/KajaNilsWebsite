@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _238dd1ca = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _4e54cc03 = () => interopDefault(import('../pages/movies.vue' /* webpackChunkName: "pages/movies" */))
+const _eb765616 = () => interopDefault(import('../pages/pictures.vue' /* webpackChunkName: "pages/pictures" */))
 const _a8f47ee8 = () => interopDefault(import('../pages/places.vue' /* webpackChunkName: "pages/places" */))
 const _3f0eb1c6 = () => interopDefault(import('../pages/restaurants.vue' /* webpackChunkName: "pages/restaurants" */))
 const _302fc4f4 = () => interopDefault(import('../pages/todo.vue' /* webpackChunkName: "pages/todo" */))
@@ -30,6 +31,10 @@ export const routerOptions = {
     path: "/movies",
     component: _4e54cc03,
     name: "movies"
+  }, {
+    path: "/pictures",
+    component: _eb765616,
+    name: "pictures"
   }, {
     path: "/places",
     component: _a8f47ee8,

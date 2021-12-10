@@ -11,6 +11,9 @@
   "Movie": {
     "description": "Auto imported from components/movie.vue"
   },
+  "Pictures": {
+    "description": "Auto imported from components/pictures.vue"
+  },
   "Place": {
     "description": "Auto imported from components/place.vue"
   },

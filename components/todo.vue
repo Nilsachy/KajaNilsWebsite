@@ -39,7 +39,7 @@
               We have 0 Todos, add some
             </v-subheader>
             <v-subheader v-else class="subheading">
-              Our Todos
+              Our todos
             </v-subheader>
 
             <v-list-item-group>

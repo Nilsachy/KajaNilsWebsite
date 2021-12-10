@@ -7,7 +7,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
-    title: 'For you',
+    title: 'for you',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,7 +18,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.jpg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 

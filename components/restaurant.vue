@@ -22,14 +22,31 @@
 
             <v-list-item>
               <v-list-item-content>
-                <v-text-field
-                  id="newRestaurant"
-                  v-model="newRestaurant.name"
-                  outlined
-                  name="newRestaurant"
-                  label="Type your restaurant"
-                  @keyup.enter="addNewRestaurant"
-                />
+                <v-row>
+                  <v-col cols="12" sm="5">
+                    <v-text-field
+                      id="newRestaurant"
+                      v-model="newRestaurant.name"
+                      outlined
+                      name="newRestaurant"
+                      label="Type your restaurant"
+                    />
+                  </v-col>
+                  <v-col cols="12" sm="5">
+                    <v-text-field
+                      id="newRestaurant"
+                      v-model="newRestaurant.city"
+                      outlined
+                      name="newRestaurant"
+                      label="Type the city"
+                    />
+                  </v-col>
+                  <v-col cols="12" sm="1">
+                    <v-btn v-if="newRestaurant.name !== '' && newRestaurant.city !== ''" class="mt-3" icon @click="addNewRestaurant">
+                      <v-icon>mdi-send</v-icon>
+                    </v-btn>
+                  </v-col>
+                </v-row>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -56,7 +73,7 @@
                   >
                     {{ restaurant.name }}
                   </v-list-item-title>
-                  <v-list-item-subtitle>Added on: {{ date }}{{ ord }} {{ day }} {{ year }}</v-list-item-subtitle>
+                  <v-list-item-subtitle>{{ restaurant.city }}</v-list-item-subtitle>
                 </v-list-item-content>
                 <v-btn
                   fab
@@ -87,6 +104,7 @@ export default {
       restaurants: [],
       newRestaurant: {
         name: '',
+        city: '',
         visited: false
       },
       day: this.restaurantDay(),
@@ -110,6 +128,7 @@ export default {
     addNewRestaurant () {
       const formdata = new FormData()
       formdata.append('name', this.newRestaurant.name)
+      formdata.append('city', this.newRestaurant.city)
       formdata.append('visited', this.newRestaurant.visited)
       axios({
         url: 'http://localhost:8765/restaurants/create',
@@ -126,6 +145,7 @@ export default {
       const formdata = new FormData()
       formdata.append('id', restaurant.id)
       formdata.append('name', restaurant.name)
+      formdata.append('city', restaurant.city)
       formdata.append('visited', restaurant.visited)
       axios({
         url: 'http://localhost:8765/restaurants/edit_restaurant',
