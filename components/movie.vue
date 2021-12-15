@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     getAllMovies () {
-      axios.get('http://localhost:8765/movies', {
+      axios.get('https://api-noe-workspace.com/backend-kn/movies', {
       })
         .then((response) => {
           this.movies = response.data
@@ -112,7 +112,7 @@ export default {
       formdata.append('title', this.newMovie.title)
       formdata.append('watched', this.newMovie.watched)
       axios({
-        url: 'http://localhost:8765/movies/create',
+        url: 'https://api-noe-workspace.com/backend-kn/movies/create',
         method: 'POST',
         data: formdata
       }).then((response) => {
@@ -128,7 +128,7 @@ export default {
       formdata.append('title', movie.title)
       formdata.append('watched', movie.watched)
       axios({
-        url: 'http://localhost:8765/movies/edit_movie',
+        url: 'https://api-noe-workspace.com/backend-kn/movies/edit_movie',
         method: 'PUT',
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -147,7 +147,7 @@ export default {
       const formdata = new FormData()
       formdata.append('id', movie.id)
       axios({
-        url: 'http://localhost:8765/movies/delete_movie',
+        url: 'https://api-noe-workspace.com/backend-kn/movies/delete_movie',
         method: 'DELETE',
         headers: {
           'Content-Type': 'multipart/form-data'

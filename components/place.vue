@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     getAllPlaces () {
-      axios.get('http://localhost:8765/places', {
+      axios.get('https://api-noe-workspace.com/backend-kn/places', {
       })
         .then((response) => {
           this.places = response.data
@@ -112,7 +112,7 @@ export default {
       formdata.append('name', this.newPlace.name)
       formdata.append('visited', this.newPlace.visited)
       axios({
-        url: 'http://localhost:8765/places/create',
+        url: 'https://api-noe-workspace.com/backend-kn/places/create',
         method: 'POST',
         data: formdata
       }).then((response) => {
@@ -128,7 +128,7 @@ export default {
       formdata.append('name', place.name)
       formdata.append('visited', place.visited)
       axios({
-        url: 'http://localhost:8765/places/edit_place',
+        url: 'https://api-noe-workspace.com/backend-kn/places/edit_place',
         method: 'PUT',
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -147,7 +147,7 @@ export default {
       const formdata = new FormData()
       formdata.append('id', place.id)
       axios({
-        url: 'http://localhost:8765/places/delete_place',
+        url: 'https://api-noe-workspace.com/backend-kn/places/delete_place',
         method: 'DELETE',
         headers: {
           'Content-Type': 'multipart/form-data'
