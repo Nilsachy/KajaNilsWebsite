@@ -1,6 +1,6 @@
 <template>
   <div class="mt-10">
-    <h1 style="color: #fff;">
+    <h1 style="color: #fff; font-size:35px;">
       Bonjour
       <vue-typer
         :text="text"
@@ -72,7 +72,7 @@
         </v-col>
         <v-col cols="12" sm="4">
           <v-card
-            class="vcard"
+            class="vcard mt-7"
             style="background-image: linear-gradient(to right, #996633 , #e6ccb3);"
             hover
             width="250"
@@ -89,7 +89,7 @@
         </v-col>
         <v-col cols="12" sm="4">
           <v-card
-            class="vcard"
+            class="vcard mt-7"
             style="background-image: linear-gradient(to right, #339933 , #b3e6b3);"
             hover
             width="250"
@@ -115,7 +115,7 @@ export default {
   layout: 'simpleview',
   data () {
     return {
-      text: ['Kaja', 'baby', 'my love', 'Nils']
+      text: ['Kaja', 'baby', 'my love', 'słodzenie']
     }
   }
 }
@@ -153,7 +153,6 @@ export default {
 }
 
 .vcard {
-  border-radius: 10px !important;
   margin:auto;
 }
 
