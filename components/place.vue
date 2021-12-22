@@ -4,7 +4,6 @@
       <v-col>
         <v-card elevation="10" class="pa-5">
           <v-toolbar color="transparent" elevation="0">
-            <v-toolbar-side-icon />
             <v-toolbar-title class="headline">
               All the places we want to visit! <span style="font-size:100%;color:red;">&hearts;</span>
             </v-toolbar-title>
@@ -56,7 +55,7 @@
                   >
                     {{ place.name }}
                   </v-list-item-title>
-                  <v-list-item-subtitle>Added on: {{ date }}{{ ord }} {{ day }} {{ year }}</v-list-item-subtitle>
+                  <v-list-item-subtitle>Added on: {{ place.date }}</v-list-item-subtitle>
                 </v-list-item-content>
                 <v-btn
                   fab
@@ -87,7 +86,8 @@ export default {
       places: [],
       newPlace: {
         name: '',
-        visited: false
+        visited: false,
+        date: new Date().toISOString().substr(0, 10) + ' 00:00:00'
       },
       day: this.placeDay(),
       date: new Date().getDate(),
@@ -104,6 +104,12 @@ export default {
       })
         .then((response) => {
           this.places = response.data
+          this.places.forEach((element) => {
+            const year = element.date
+            const month = element.date
+            const day = element.date
+            element.date = day.substring(8, 10) + '-' + month.substring(5, 7) + '-' + year.substring(0, 4)
+          })
         })
         .catch(error => console.log(error))
     },
@@ -111,6 +117,7 @@ export default {
       const formdata = new FormData()
       formdata.append('name', this.newPlace.name)
       formdata.append('visited', this.newPlace.visited)
+      formdata.append('date', this.newPlace.date)
       axios({
         url: 'https://api-noe-workspace.com/backend-kn/places/create',
         method: 'POST',
