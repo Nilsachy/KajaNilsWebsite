@@ -100,7 +100,7 @@ export default {
   },
   methods: {
     getAllToDos () {
-      axios.get('https://api-noe-workspace.com/backend-kn/todos', {
+      axios.get('http://35.180.251.134:8765/backend-kn/todos', {
       })
         .then((response) => {
           this.todos = response.data
@@ -119,7 +119,7 @@ export default {
       formdata.append('done', this.newTodo.done)
       formdata.append('date', this.newTodo.date)
       axios({
-        url: 'https://api-noe-workspace.com/backend-kn/todos/create',
+        url: 'http://35.180.251.134:8765/backend-kn/todos/create',
         method: 'POST',
         data: formdata
       }).then((response) => {
@@ -135,7 +135,7 @@ export default {
       formdata.append('title', todo.title)
       formdata.append('done', todo.done)
       axios({
-        url: 'https://api-noe-workspace.com/backend-kn/todos/edit_todo',
+        url: 'http://35.180.251.134:8765/backend-kn/todos/edit_todo',
         method: 'PUT',
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -154,7 +154,7 @@ export default {
       const formdata = new FormData()
       formdata.append('id', todo.id)
       axios({
-        url: 'https://api-noe-workspace.com/backend-kn/todos/delete_todo',
+        url: 'http://35.180.251.134:8765/backend-kn/todos/delete_todo',
         method: 'DELETE',
         headers: {
           'Content-Type': 'multipart/form-data'

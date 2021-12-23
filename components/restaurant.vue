@@ -119,7 +119,7 @@ export default {
   },
   methods: {
     getAllRestaurants () {
-      axios.get('https://api-noe-workspace.com/backend-kn/restaurants', {
+      axios.get('http://35.180.251.134:8765/backend-kn/restaurants', {
       })
         .then((response) => {
           this.restaurants = response.data
@@ -139,7 +139,7 @@ export default {
       formdata.append('visited', this.newRestaurant.visited)
       formdata.append('date', this.newRestaurant.date)
       axios({
-        url: 'https://api-noe-workspace.com/backend-kn/restaurants/create',
+        url: 'http://35.180.251.134:8765/backend-kn/restaurants/create',
         method: 'POST',
         data: formdata
       }).then((response) => {
@@ -156,7 +156,7 @@ export default {
       formdata.append('city', restaurant.city)
       formdata.append('visited', restaurant.visited)
       axios({
-        url: 'https://api-noe-workspace.com/backend-kn/restaurants/edit_restaurant',
+        url: 'http://35.180.251.134:8765/backend-kn/restaurants/edit_restaurant',
         method: 'PUT',
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -175,7 +175,7 @@ export default {
       const formdata = new FormData()
       formdata.append('id', restaurant.id)
       axios({
-        url: 'https://api-noe-workspace.com/backend-kn/restaurants/delete_restaurant',
+        url: 'http://35.180.251.134:8765/backend-kn/restaurants/delete_restaurant',
         method: 'DELETE',
         headers: {
           'Content-Type': 'multipart/form-data'
