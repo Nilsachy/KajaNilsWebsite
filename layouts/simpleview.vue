@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background-color:#546e7a; background-image: url('pngwing.com (3).png'); background-size: cover;">
+  <v-app style="background-color:#546e7a; background-image: url('snowflake_and_snowfall.png'); background-size: contain;">
     <v-main>
       <v-icon v-show="$route.name !== 'index'" style="position:relative; left:50px; top:50px;" size="60px" color="white" @click="$router.back()">
         mdi-arrow-left

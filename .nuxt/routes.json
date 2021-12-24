@@ -1,12 +1,5 @@
 [
   {
-    "name": "inspire",
-    "path": "/inspire",
-    "component": "/Users/nilsachy/KajaNilsWebsite/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_238dd1ca"
-  },
-  {
     "name": "movies",
     "path": "/movies",
     "component": "/Users/nilsachy/KajaNilsWebsite/pages/movies.vue",

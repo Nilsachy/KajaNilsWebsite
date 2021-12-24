@@ -1,6 +1,3 @@
-export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
-export { default as Tutorial } from '../../components/Tutorial.vue'
-export { default as VuetifyLogo } from '../../components/VuetifyLogo.vue'
 export { default as Movie } from '../../components/movie.vue'
 export { default as Pictures } from '../../components/pictures.vue'
 export { default as Place } from '../../components/place.vue'
