@@ -29,7 +29,6 @@ export default {
         { id: 16, imgSrc: require('@/static/16.jpeg') },
         { id: 17, imgSrc: require('@/static/17.jpeg') },
         { id: 18, imgSrc: require('@/static/18.jpeg') }
-
       ]
     }
   }
