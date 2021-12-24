@@ -22,7 +22,14 @@ export default {
         { id: 9, imgSrc: require('@/assets/9.jpeg') },
         { id: 10, imgSrc: require('@/assets/10.jpeg') },
         { id: 11, imgSrc: require('@/assets/11.jpeg') },
-        { id: 12, imgSrc: require('@/assets/12.jpeg') }
+        { id: 12, imgSrc: require('@/assets/12.jpeg') },
+        { id: 13, imgSrc: require('@/assets/13.jpeg') },
+        { id: 14, imgSrc: require('@/assets/14.jpeg') },
+        { id: 15, imgSrc: require('@/assets/15.jpeg') },
+        { id: 16, imgSrc: require('@/assets/16.jpeg') },
+        { id: 17, imgSrc: require('@/assets/17.jpeg') },
+        { id: 18, imgSrc: require('@/assets/18.jpeg') }
+
       ]
     }
   }
