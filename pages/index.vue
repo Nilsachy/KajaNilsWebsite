@@ -1,6 +1,6 @@
 <template>
   <div class="mt-10">
-    <h1 style="color: #fff; font-size:35px;">
+    <h1 style="color: white; font-size:40px;">
       Bonjour
       <vue-typer
         :text="text"
@@ -9,7 +9,7 @@
         initial-action="typing"
         :pre-type-delay="70"
         :type-delay="100"
-        :pre-erase-delay="2000"
+        :pre-erase-delay="3000"
         :erase-delay="500"
         erase-style="select-all"
         :erase-on-complete="false"
@@ -106,6 +106,9 @@
         </v-col>
       </v-row>
     </div>
+    <v-dialog v-if="!alreadyOpened" v-model="dialogMerryChristmas" max-width="500px">
+      <v-img :src="require('@/static/merryChristmas.jpeg')" />
+    </v-dialog>
   </div>
 </template>
 
@@ -115,7 +118,24 @@ export default {
   layout: 'simpleview',
   data () {
     return {
-      text: ['Kaja', 'baby', 'my love', 'słodzenie']
+      text: ['Kaja', 'baby', 'my love', 'słodzenie'],
+      dialogMerryChristmas: false,
+      alreadyOpened: false
+    }
+  },
+  created () {
+    this.alreadyOpened = this.$store.getters['store/getOpened']
+  },
+  mounted () {
+    this.timeout()
+  },
+  methods: {
+    timeout () {
+      setTimeout(this.openDialog, 2000)
+    },
+    openDialog () {
+      this.dialogMerryChristmas = true
+      this.$store.dispatch('store/updateOpened', true)
     }
   }
 }
